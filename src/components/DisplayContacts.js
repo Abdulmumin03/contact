@@ -1,5 +1,7 @@
 import React from 'react';
 
+const fs = require('fs');
+
 function DisplayContacts (props){
     const {contactList} = props;
 
@@ -19,7 +21,13 @@ function DisplayContacts (props){
                 )
               })
             ) : (<div></div>)
+            //let data = JSON.stringify(contactLists);
+            //fs.writeFileSync('contact.json', data);  
           return (<div>{contactLists}</div>);
+    }
+
+    function writeNewData() {
+        
     }
 
     return(
